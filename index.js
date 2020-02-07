@@ -14,7 +14,9 @@ app.use("/posts", postRouter);
 app.use("/user/", userRouter);
 app.use("/user/:id", userDetailRouter);
 
-
+app.get("/",(req,res)=>{
+  res.send("Hello, it's a home page")
+})
 
 mongoose.connect(
   "mongodb+srv://John:Doe@testcluster-itxrr.mongodb.net/test?retryWrites=true&w=majority",
